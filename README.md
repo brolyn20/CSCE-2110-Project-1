@@ -5,11 +5,11 @@ names of all group members
 
 Zackary Sturtevant : Main.cpp, QueueSystem.h, QueueSystem.cpp
 
-Brolyn Ingosi : StudentList.h, StudentList.cpp, students.txt
+Brolyn Ingosi : StudentList.h, StudentList.cpp
 
-Emilio Palacio : CampusMap.h, CampusMap.cpp, campus_map.txt
+Emilio Palacio : CampusMap.h, CampusMap.cpp
 
-Najeeb Rafeeq : FileManager.h, FileManager.cpp
+Najeeb Rafeeq : FileManager.h, FileManager.cpp, campus_map.txt,  students.txt
 
 
 compilation instructions : make sure you have the two .txt files in same folder as code and type "g++ Main.cpp QueueSystem.cpp"
