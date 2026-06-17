@@ -98,10 +98,9 @@ int main() {
                 break;
             case 9:
                 cout << "\n================ CAMPUS STATISTICS ================\n";
-                // Example connection between statistics and your queue system module
                 cout << "Pending Advising Requests: " << advisingOffice.getPendingCount() << "\n";
-                cout << "Total Students: [Link StudentList data here]\n";
-                cout << "Average GPA:    [Link StudentList data here]\n";
+                cout << "Total Students: [Link StudentList data here]\n"; //Brolyn do this
+                cout << "Average GPA:    [Link StudentList data here]\n";//Brolyn do this
                 cout << "===================================================\n";
                 break;
             case 10:
