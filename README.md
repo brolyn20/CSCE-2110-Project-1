@@ -7,7 +7,7 @@ Brolyn : StudentList.h, StudentList.cpp, students.txt
 Emilio : CampusMap.h, CampusMap.cpp, campus_map.txt
 
 
-compilation instructions
+compilation instructions : make sure you have the two .txt files in same folder as code and type "g++ Main.cpp QueueSystem.cpp"
 execution instructions
 description of implemented features
 known bugs or limitations
