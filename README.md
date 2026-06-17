@@ -12,7 +12,7 @@ Emilio Palacio : CampusMap.h, CampusMap.cpp
 Najeeb Rafeeq : FileManager.h, FileManager.cpp, campus_map.txt,  students.txt
 
 
-compilation instructions : make sure you have the two .txt files in same folder as code and type "g++ Main.cpp QueueSystem.cpp"
+compilation instructions : make sure you have the two .txt files in same folder as code and type "g++ Main.cpp QueueSystem.cpp -o program"
 
 execution instructions
 description of implemented features
