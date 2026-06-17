@@ -33,10 +33,10 @@ int main() {
     cout << "  Campus Exploration and Student Resource Management     \n";
     cout << "=========================================================\n\n";
 
-    // mapFilename = "";
+    // mapFilename = ""; this stays
     //campusMap.loadFromFile(mapFilename);
     // TODO: Call  CampusMap loading function here:
-    // studentFilename = "";
+    // studentFilename = ""; and this
     // studentList.loadFromFile(studentFilename);
     // TODO: Call your StudentList loading function here:
     // Najeeb do this
