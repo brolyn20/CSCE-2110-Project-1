@@ -1,0 +1,22 @@
+Group 4 – Engineering Campus
+Map Symbols
+P = Parking Lot R = Road B = Building C = Classroom L = Library X = Blocked Area
+campus_map.txt
+8 8
+
+P R R B B R R P
+R C C R R B R R
+R R R R R R R R
+L R B B R C R R
+R R R R R R R R
+C R R L R B R R
+R R X R R R R R
+P R B R C R L R
+
+students.txt
+4001 James CS 3.55
+4002 Charlotte CE 3.88
+4003 Benjamin EE 3.15
+4004 Amelia CS 3.97
+4005 Henry CE 3.49
+4006 Ella EE 3.22
