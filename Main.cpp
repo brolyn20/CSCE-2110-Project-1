@@ -35,10 +35,11 @@ int main() {
 
     // mapFilename = "";
     //campusMap.loadFromFile(mapFilename);
-    // TODO: Call  CampusMap loading function here: Emilio do this
+    // TODO: Call  CampusMap loading function here:
     // studentFilename = "";
     // studentList.loadFromFile(studentFilename);
-    // TODO: Call your StudentList loading function here: Brolyn do this
+    // TODO: Call your StudentList loading function here:
+    // Najeeb do this
 
     int choice = 0;
     while (choice != 10) {
