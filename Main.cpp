@@ -24,6 +24,7 @@
 using namespace std;
 // #include "CampusMap.h"   // Emilio do this
 #include "StudentList.h"
+#include "FileManager.h"
 
 void displayMenu();
 int main() {
@@ -43,6 +44,8 @@ int main() {
     // studentList.loadFromFile(studentFilename);
     // TODO: Call your StudentList loading function here:
     // Najeeb do this
+    studentFilename = "students.txt";
+    FileManager:: loadStudents(studentFilename, studentList);
 
     int choice = 0;
     while (choice != 10) {
