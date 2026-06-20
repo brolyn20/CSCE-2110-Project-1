@@ -21,11 +21,14 @@
 #include <queue>        //Yes I am aware most of these might be unnessary but I'll clear them out after checkpoint one once we have a working model so I can truly Determin what is and isn't needed -ZDS
 // Include project modules
 #include "QueueSystem.h"
+using namespace std;
 // #include "CampusMap.h"   // Emilio do this
-// #include "StudentList.h" // Brolyn do this
+#include "StudentList.h"
+
 void displayMenu();
 int main() {
     QueueSystem advisingOffice;
+    StudentList studentList; // declaring student list, won't commpile otherwise(brolyn)
     string mapFilename;
     string studentFilename;
 
@@ -65,25 +68,103 @@ int main() {
                 // Explore logic
                 break;
             
-            case 3://Brolyn do this
+            case 3: {//Brolyn do this
                 cout << "\n[Feature] Adding a New Student...\n";
                 // studentList.addStudent();
+
+                int id;
+                cout << "Enter Student ID: ";
+                if (!(cin >> id)) {
+                    cout << "Invalid ID. Returning to menu.\n";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                string name, major;
+                cout << "Enter Student Name: ";
+                getline(cin, name);
+                cout << "Enter Major: ";
+                getline(cin, major);
+
+                float gpa;
+                cout << "Enter GPA: ";
+                if (!(cin >> gpa)) {
+                    cout << "Invalid GPA. Returning to menu.\n";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                if (studentList.addStudent(id, name, major, gpa)) {
+                    cout << "Student added successfully.\n";
+                }
+                else {
+                    cout << "A student with ID " << id << " already exists. Student not added.\n";
+                }
                 break;
+            }
             
-            case 4://Brolyn do this
+            case 4: {//Brolyn do this
                 cout << "\n[Feature] Removing a Student...\n";
                 // studentList.removeStudent();
+
+                int id;
+                cout << "Enter Student ID to remove: ";
+                if (!(cin >> id)) {
+                    cout << "Invalid ID. Returning to menu.\n";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                if (studentList.removeStudent(id)) {
+                    cout << "Student removed successfully.\n";
+                }
+                else {
+                    cout << "No student found with ID " << id << ".\n";
+                }
                 break;
+            }
             
-            case 5://Brolyn do this
+            case 5: {//Brolyn do this
                 cout << "\n[Feature] Searching for a Student...\n";
                 // studentList.searchStudent();
+                int id;
+                cout << "Enter Student ID to search for: ";
+                if (!(cin >> id)) {
+                    cout << "Invalid ID. Returning to menu.\n";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                Student* found = studentList.searchStudent(id);
+                if (found != nullptr) {
+                    cout << "\nStudent Found:\n";
+                    cout << "ID:    " << found->id << "\n";
+                    cout << "Name:  " << found->name << "\n";
+                    cout << "Major: " << found->major << "\n";
+                    cout << "GPA:   " << found->gpa << "\n";
+                }
+                else {
+                    cout << "No student found with ID " << id << ".\n";
+                }
                 break;
+            }
             
-            case 6://Brolyn do this
+            case 6: {//Brolyn do this
                 cout << "\n[Feature] Sorting Student Records...\n";
                 // studentList.sortByID();
+
+                studentList.sortByID();
+                studentList.displayAll();
                 break;
+            }
             
             case 7: {
                 int id;
