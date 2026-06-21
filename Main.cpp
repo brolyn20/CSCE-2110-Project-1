@@ -32,6 +32,7 @@ int main() {
     StudentList studentList; // declaring student list, won't commpile otherwise(brolyn)
     string mapFilename;
     string studentFilename;
+    CampusMap campusMap;
 
     cout << "=========================================================\n";
     cout << "  Campus Exploration and Student Resource Management     \n";
