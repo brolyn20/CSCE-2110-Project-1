@@ -38,8 +38,8 @@ int main() {
     cout << "  Campus Exploration and Student Resource Management     \n";
     cout << "=========================================================\n\n";
 
-    // mapFilename = ""; this stays
-    //campusMap.loadFromFile(mapFilename);
+    mapFilename = "campus_map.txt";
+    campusMap.loadFromFile(mapFilename);
     // TODO: Call  CampusMap loading function here:
     // studentFilename = ""; and this
     // studentList.loadFromFile(studentFilename);
@@ -214,13 +214,20 @@ int main() {
                 advisingOffice.processNextRequest();
                 break;
             
-            case 9:
-                cout << "\n================ CAMPUS STATISTICS ================\n";
-                cout << "Pending Advising Requests: " << advisingOffice.getPendingCount() << "\n";
-                cout << "Total Students: [Link StudentList data here]\n"; //Brolyn do this
-                cout << "Average GPA:    [Link StudentList data here]\n";//Brolyn do this
-                cout << "===================================================\n";
-                break;
+            case 9: {
+                    int count = studentList.getCount();
+                    cout << "\n================ CAMPUS STATISTICS ================\n";
+                    cout << "Pending Advising Requests: " << advisingOffice.getPendingCount() << "\n";
+                    cout << "Total Students: " << count << "\n";
+                    cout << fixed << setprecision(2);
+                    if (count > 0) {
+                        cout << "Average GPA:    " << studentList.getAverageGPA() << "\n";
+                    } else {
+                        cout << "Average GPA:    N/A\n";
+                    }
+                    cout << "===================================================\n";
+                    break;
+            }
             
             case 10:
                 cout << "\nExiting the system. Thank you!\n";
