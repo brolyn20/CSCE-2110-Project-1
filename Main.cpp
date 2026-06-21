@@ -63,13 +63,42 @@ int main() {
         switch (choice) {
             case 1://Emilio do this
                 cout << "\n[Feature] Displaying Campus Map...\n";
-                // campusMap.display();               
+                campusMap.displayMap();
                 break;
             
-            case 2://Emilio do this
+            case 2: {//Emilio do this
                 cout << "\n[Feature] Exploring Location Coordinates...\n";
-                // Explore logic
+
+                int row, col;
+                cout << "Enter row and column: ";
+                if (!(cin >> row >> col)) {
+                    cout << "Invalid coordinates. Returning to menu.\n";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                if (!campusMap.isValidLocation(row, col)) {
+                    cout << "Those coordinates are outside the map. ";
+                    cout << "Rows go from 0 to " << campusMap.getRows() - 1;
+                    cout << " and columns go from 0 to " << campusMap.getCols() - 1 << "\n";
+                    break;
+                }
+
+                char symbol = campusMap.getSymbol(row, col);
+                cout << "Location Type: " << campusMap.getLocationName(symbol) << "\n";
+
+                if (campusMap.isBlocked(row, col)) {
+                    cout << "This location is BLOCKED. You cannot walk here.\n";
+                }
+                else {
+                    cout << "This location is open.\n";
+                }
+
+                campusMap.showNeighbors(row, col);
                 break;
+            }
             
             case 3: {//Brolyn do this
                 cout << "\n[Feature] Adding a New Student...\n";
