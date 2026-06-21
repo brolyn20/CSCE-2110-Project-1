@@ -22,7 +22,7 @@
 // Include project modules
 #include "QueueSystem.h"
 using namespace std;
-// #include "CampusMap.h"   // Emilio do this
+#include "CampusMap.h"   // Emilio do this
 #include "StudentList.h"
 #include "FileManager.h"
 
