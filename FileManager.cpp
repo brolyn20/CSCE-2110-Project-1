@@ -46,3 +46,7 @@ bool FileManager::loadStudents(const string& filename, StudentList& studentList)
     file.close();
     return true;
 }
+bool FileManager::loadCampusMap(const string& filename, CampusMap& campusMap) {
+    return campusMap.loadFromFile(filename);
+       
+}
