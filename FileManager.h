@@ -11,6 +11,8 @@ public:
     static bool loadStudents(const std::string& filename, StudentList& studentList);
     static bool loadCampusMap(const std::string& filename, CampusMap& campusMap);
 //reads campus map and loads
+
+static bool saveStudents(const std::string& filename, const StudentList& studentList); //save student data
 };
 
 #endif //
