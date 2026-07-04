@@ -38,14 +38,16 @@ int main() {
     cout << "  Campus Exploration and Student Resource Management     \n";
     cout << "=========================================================\n\n";
 
-    mapFilename = "campus_map.txt";
+    cout << "Enter campus map filename: ";
+    cin >> mapFilename;
     campusMap.loadFromFile(mapFilename);
     // TODO: Call  CampusMap loading function here:
     // studentFilename = ""; and this
     // studentList.loadFromFile(studentFilename);
     // TODO: Call your StudentList loading function here:
     // Najeeb do this
-    studentFilename = "students.txt";
+    cout << "Enter student data filename: ";
+    cin >> studentFilename;
     FileManager:: loadStudents(studentFilename, studentList);
 
     int choice = 0;
