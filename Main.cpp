@@ -135,6 +135,7 @@ int main() {
 
                 if (studentList.addStudent(id, name, major, gpa)) {
                     cout << "Student added successfully.\n";
+                    FileManager::saveStudents(studentFilename, studentList);
                 }
                 else {
                     cout << "A student with ID " << id << " already exists. Student not added.\n";
