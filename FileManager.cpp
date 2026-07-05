@@ -11,6 +11,7 @@ using std::ifstream;
 using std::stringstream;
 using std::cout;
 using std::getline;
+using std::ofstream;
 
 bool FileManager::loadStudents(const string& filename, StudentList& studentList) {
     ifstream file(filename);
@@ -49,4 +50,22 @@ bool FileManager::loadStudents(const string& filename, StudentList& studentList)
 bool FileManager::loadCampusMap(const string& filename, CampusMap& campusMap) {
     return campusMap.loadFromFile(filename);
        
+}
+
+bool FileManager::saveStudents(const string& filename, const StudentList& studentList) {
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cout << "Error: Could not open student file \"" << filename << "\" for writing.\n";
+        return false;
+    }
+    Node* current = studentList.getHead();
+    while (current != nullptr) {
+        file << current->data.id << ","
+             << current->data.name << ","
+             << current->data.major << ","
+             << current->data.gpa << "\n";
+        current = current->next;
+    }
+    file.close();
+    return true;
 }
