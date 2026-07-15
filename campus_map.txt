@@ -1,6 +1,9 @@
-5 5
-P R R B B
-R R R R B
-L R C C R
-R R R R R
-C C R L R
+8 8
+P R R B B R R P
+R C C R R B R R
+R R R R R R R R
+L R B B R C R R
+R R R R R R R R
+C R R L R B R R
+R R X R R R R R
+P R B R C R L R

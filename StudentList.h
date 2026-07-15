@@ -52,6 +52,8 @@ public:
     //We will sort the student's ID's via Bubble sort
     void sortByID();
 
+    Node* getHead() const;
+
 private:
     Node* head;
 };

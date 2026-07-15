@@ -38,14 +38,16 @@ int main() {
     cout << "  Campus Exploration and Student Resource Management     \n";
     cout << "=========================================================\n\n";
 
-    mapFilename = "campus_map.txt";
+    cout << "Enter campus map filename: ";
+    cin >> mapFilename;
     campusMap.loadFromFile(mapFilename);
     // TODO: Call  CampusMap loading function here:
     // studentFilename = ""; and this
     // studentList.loadFromFile(studentFilename);
     // TODO: Call your StudentList loading function here:
     // Najeeb do this
-    studentFilename = "students.txt";
+    cout << "Enter student data filename: ";
+    cin >> studentFilename;
     FileManager:: loadStudents(studentFilename, studentList);
 
     int choice = 0;
@@ -133,6 +135,7 @@ int main() {
 
                 if (studentList.addStudent(id, name, major, gpa)) {
                     cout << "Student added successfully.\n";
+                    FileManager::saveStudents(studentFilename, studentList);
                 }
                 else {
                     cout << "A student with ID " << id << " already exists. Student not added.\n";

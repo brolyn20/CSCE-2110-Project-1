@@ -1,3 +1,6 @@
-1, Student One, Computer Science, 3.75
-2, Student Two, Biology, 3.92
-3, Student Three, Cybersecurity, 3.40
+4001, James, CS, 3.55
+4002, Charlotte, CE, 3.88
+4003, Benjamin, EE, 3.15
+4004, Amelia, CS, 3.97
+4005, Henry, CE, 3.49
+4006, Ella, EE, 3.22

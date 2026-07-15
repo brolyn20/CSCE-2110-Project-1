@@ -140,6 +140,10 @@ float StudentList::getAverageGPA() const {
     }
     return (count == 0) ? 0.0f : total / count;
 }
+//get head
+Node* StudentList::getHead() const {
+    return head;
+}
 
 void StudentList::sortByID() {
     // Nothing to sort if the list is empty or has only one student.
